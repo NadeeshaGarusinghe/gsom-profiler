@@ -48,12 +48,10 @@ def plot_only_visualization():
     dataset = parameters[0]
     SF = parameters[2]
     forget_threshold_label = [f for f in listdir(result_location) if '.pickle' in f][0].split('_F-')[1].split('_')[0]
-    interactive_plot_title = dataset + ' Analysis'
 
     print('Plot interactive visualization for {} with SF={} with {} forget threshold.'.format(dataset, SF, forget_threshold_label))
 
-    int_display.InteractiveDisplay.plot_interactive(dataset, result_location, SF, forget_threshold_label,
-                                                    interactive_plot_title)
+    int_display.InteractiveDisplay.plot_interactive(dataset, result_location, SF, forget_threshold_label)
 
 
 def generate_latent_map(visualize=False):
